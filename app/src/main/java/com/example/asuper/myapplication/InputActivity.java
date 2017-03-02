@@ -6,7 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
-
 import android.widget.Toast;
 
 
@@ -14,8 +13,7 @@ import android.widget.Toast;
 
 public class InputActivity extends AppCompatActivity implements View.OnClickListener {
     private EditText et_number;
-    private EditText et_number2;
-    private EditText et_date;
+
     private EditText et_desc;
 
     @Override
@@ -26,7 +24,6 @@ public class InputActivity extends AppCompatActivity implements View.OnClickList
         findViewById(R.id.tv_record).setOnClickListener(this);
         findViewById(R.id.input).setOnClickListener(this);
         et_number = (EditText) findViewById(R.id.et_number);
-        et_number2 = (EditText) findViewById(R.id.et_number2);
          et_desc = (EditText) findViewById(R.id.et_write);
     }
 
@@ -37,9 +34,7 @@ public class InputActivity extends AppCompatActivity implements View.OnClickList
 
 
             case R.id.input:
-                int a = Integer.parseInt(et_number.getText().toString());
-                int b = Integer.parseInt(et_number2.getText().toString());
-                int money = a - b;
+                int money = Integer.parseInt(et_number.getText().toString());
                 String desc = et_desc.getText().toString();
 
 
